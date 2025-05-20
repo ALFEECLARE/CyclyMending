@@ -1,0 +1,7 @@
+{
+	"jp.ne.clane.cyclyMending.title": "Cycly Mending",
+	"jp.ne.clane.cyclyMending.toggle": "有効化 / 無効化",
+	"jp.ne.clane.cyclyMending.message.activated": "Cycly Mendingを有効化しました。",
+	"jp.ne.clane.cyclyMending.message.deactivated": "Cycly Mendingを無効化しました。",
+	"jp.ne.clane.cyclyMending.message.autoDeactivaed": "修繕可能なアイテムがありません。Cyclye Mendingを自動で無効化しました。"
+}

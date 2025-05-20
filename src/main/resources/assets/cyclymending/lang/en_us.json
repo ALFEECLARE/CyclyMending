@@ -1,0 +1,7 @@
+{
+	"jp.ne.clane.cyclyMending.title": "Cycly Mending",
+	"jp.ne.clane.cyclyMending.toggle": "Activate / Deactivate",
+	"jp.ne.clane.cyclyMending.message.activated": "Cycly Mending Activated.",
+	"jp.ne.clane.cyclyMending.message.deactivated": "Cycly Mending Deactivate.",
+	"jp.ne.clane.cyclyMending.message.autoDeactivaed": "No Item Mendable. Cyclye Mending Automatically Deactivated."
+}

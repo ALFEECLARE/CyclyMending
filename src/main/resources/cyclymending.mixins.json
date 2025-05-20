@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "jp.ne.clane.cyclyMending.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "ClientPlayerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
