@@ -113,7 +113,7 @@ public class CyclyMending {
 
 		if (mendingModeKey.consumeClick()) {
 			isMendingMode = !isMendingMode;
-			getMC().player.sendSystemMessage(Component.translatable("jp.ne.clane.cyclyMending.message." + (isMendingMode ? "activated" : "deactivated")));
+			getMC().player.displayClientMessage(Component.translatable("jp.ne.clane.cyclyMending.message." + (isMendingMode ? "activated" : "deactivated")), false);
 		}
 	}
 

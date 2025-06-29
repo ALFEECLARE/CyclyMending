@@ -48,7 +48,7 @@ public class ClientPlayerMixin extends AbstractClientPlayer {
         		awaitTick = 10;
             } else {
             	CyclyMending.isMendingMode = false;
-            	this.sendSystemMessage(Component.translatable("jp.ne.clane.cyclyMending.message.autoDeactivaed"));
+            	this.displayClientMessage(Component.translatable("jp.ne.clane.cyclyMending.message.autoDeactivaed"), false);
             }
         }
     }

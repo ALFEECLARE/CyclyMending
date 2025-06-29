@@ -4,7 +4,6 @@ import org.anti_ad.mc.ipn.api.access.IPN;
 
 import com.mojang.datafixers.util.Pair;
 
-import jp.ne.clane.cyclyMending.CyclyMending;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.core.NonNullList;
@@ -52,13 +51,11 @@ public class ClientUtils {
 			mc.gameMode.handleInventoryMouseClick(mc.player.inventoryMenu.containerId, toSlotId,   0, ClickType.PICKUP, localPlayer);
 			mc.gameMode.handleInventoryMouseClick(mc.player.inventoryMenu.containerId, fromSlotId, 0, ClickType.PICKUP, localPlayer);
 			mc.gameMode.handleInventoryMouseClick(mc.player.inventoryMenu.containerId, toSlotId,   0, ClickType.PICKUP, localPlayer);
-    		CyclyMending.log("swapped vanilla method");
     	} else {
     		IPN.getInstance().getContainerClicker().swap(toSlotId, fromSlotId);
     		//IPN.getInstance().getContainerClicker().leftClick(toSlotId);
     		//IPN.getInstance().getContainerClicker().leftClick(fromSlotId);
     		//IPN.getInstance().getContainerClicker().leftClick(toSlotId);
-    		CyclyMending.log("swapped IPN method");
     	}
 	}
 	
