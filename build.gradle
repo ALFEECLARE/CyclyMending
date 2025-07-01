@@ -35,7 +35,7 @@ base {
 // Mojang ships Java 21 to end users starting in 1.20.5, so mods should target Java 21.
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
-//minecraft.accessTransformers.file rootProject.file('src/main/resources/META-INF/accesstransformer.cfg')
+minecraft.accessTransformers.file rootProject.file('src/main/resources/META-INF/accesstransformer.cfg')
 //minecraft.accessTransformers.entry public net.minecraft.client.Minecraft textureManager # textureManager
 
 // Default run configurations.
@@ -75,7 +75,7 @@ runs {
         systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
     }
 
-    data {
+    clientData {
         // example of overriding the workingDirectory set in configureEach above, uncomment if you want to use it
         // workingDirectory project.file('run-data')
 

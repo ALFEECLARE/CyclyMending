@@ -38,7 +38,7 @@ public class ClientPlayerMixin extends AbstractClientPlayer {
     	if (!CyclyMending.isMendingMode || swappedInventoryIndex != -1) { return; }
         if (this.onGround() || this.isInWater()) {
             Inventory inventory = this.getInventory();
-            if (isDamagedAndMendableItem(inventory.offhand.getFirst())) {
+            if (isDamagedAndMendableItem(ClientUtils.getInventoryFromInventoryType(InventoryType.OFFHAND, inventory).getFirst())) {
             	return;
             }
             int targetIndex = getMendableItemIndex(inventory); 
@@ -67,7 +67,7 @@ public class ClientPlayerMixin extends AbstractClientPlayer {
     		awaitTick = 10;
     	} else if (this.onGround() || this.isInWater()) {
             Inventory inventory = this.getInventory();
-            if (!isDamagedAndMendableItem(inventory.offhand.getFirst())) {
+            if (!isDamagedAndMendableItem(ClientUtils.getInventoryFromInventoryType(InventoryType.OFFHAND, inventory).getFirst())) {
 	    		ClientUtils.swapPlayerInventorySlot(this, ClientUtils.convertSlotIdFromInventoryPair(InventoryType.OFFHAND, 0), ClientUtils.convertSlotIdFromInventoryPair(InventoryType.INVENTORY, swappedInventoryIndex));
 	    		swappedInventoryIndex = -1;
         		awaitTick = 10;
@@ -80,9 +80,9 @@ public class ClientPlayerMixin extends AbstractClientPlayer {
     }
     
     private int getMendableItemIndex(Inventory inventory) {
-	    NonNullList<ItemStack> mainInventory = inventory.items;
+	    NonNullList<ItemStack> mainInventory = ClientUtils.getInventoryFromInventoryType(InventoryType.INVENTORY, inventory);
 	    for (int i=0;i < mainInventory.size() ;i++) {
-	    	if (i == inventory.selected) { continue; }
+	    	if (i == inventory.getSelectedSlot()) { continue; }
 	    	if (isDamagedAndMendableItem(mainInventory.get(i))) {
 	    		return i;
 	    	}
